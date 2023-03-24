@@ -1,6 +1,7 @@
 package me.paqlio
 
 
+import me.paqlio.Commands.Help
 import me.paqlio.Events.Join
 import org.bukkit.Bukkit
 import org.bukkit.plugin.PluginManager
@@ -11,6 +12,7 @@ class main : JavaPlugin() {
         server.consoleSender.sendMessage("Hello world")
         val pm : PluginManager = Bukkit.getPluginManager()
         pm.registerEvents(Join(), this)
+        getCommand("help")!!.setExecutor(Help())
     }
 
     override fun onDisable() {
