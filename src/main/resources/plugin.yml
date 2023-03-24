@@ -1,0 +1,5 @@
+name: test
+version: '${project.version}'
+main: me.paqlio.main
+api-version: 1.18
+author: Myoishi
